@@ -12,6 +12,12 @@ leptos = { version = "0.8.2", features = ["csr"] }
 leptos_meta = "0.8.2"
 leptos_router = "0.8.2"
 gloo-net = { version = "0.6.0", features = ["http"] }
+tailwind_fuse = { version = "0.3.0", features = ["variant"] }
+leptos-style = "0.2.0"
+leptos-node-ref = "0.2.0"
+leptos-struct-component = "0.2.0"
+leptos_icons = "0.6.1"
+icondata = "0.6.0"
 
 # [dev-dependencies]
 # wasm-bindgen = "0.2"

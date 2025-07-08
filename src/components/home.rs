@@ -2,7 +2,7 @@ use leptos::prelude::*;
 use leptos_meta::*;
 
 #[component]
-pub fn Home() -> impl IntoView {
+pub fn Hello() -> impl IntoView {
     let (value, set_value) = signal(0);
 
     // thanks to https://tailwindcomponents.com/component/blue-buttons-example for the showcase layout
@@ -32,3 +32,4 @@ pub fn Home() -> impl IntoView {
         </main>
     }
 }
+
