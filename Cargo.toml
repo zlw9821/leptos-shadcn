@@ -7,8 +7,8 @@ edition = "2024"
 console_error_panic_hook = "0.1"
 console_log = "1"
 log = "0.4"
-web-sys = "0.3"
-leptos = { version = "0.8.2", features = ["csr"] }
+web-sys = {version = "0.3", features = ["CssStyleDeclaration", "console", "Element", "ResizeObserver", "ResizeObserverBoxOptions", "ResizeObserverSize", "ResizeObserverEntry", "ResizeObserverOptions"]}
+leptos = { version = "0.8.2", features = ["csr", "islands"] }
 leptos_meta = "0.8.2"
 leptos_router = "0.8.2"
 gloo-net = { version = "0.6.0", features = ["http"] }
@@ -18,6 +18,11 @@ leptos-node-ref = "0.2.0"
 leptos-struct-component = "0.2.0"
 leptos_icons = "0.6.1"
 icondata = { version = "0.6.0", features = ["lucide"] }
+leptos-typed-fallback-show = "0.2.0"
+# lucide-leptos = { version = "2.15.0", features = ["all-icons"] }
+chrono = { version = "0.4.41", features = ["serde"] }
+leptos-maybe-callback = "0.2.0"
+send_wrapper = "0.6.0"
 
 # [dev-dependencies]
 # wasm-bindgen = "0.2"

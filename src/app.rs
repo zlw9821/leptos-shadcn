@@ -7,6 +7,11 @@ use leptos_router::{
 
 use crate::demo::{
     alert::AlertDemo,
+    alert_dialog::AlertDialogDemo,
+    aspect_ratio::AspectRatioDemo,
+    bread_crumb::BreadcrumbDemo,
+    calendar::CalendarDemo,
+    progress::ProgressDemo,
     button::ButtonDemo,
     card::CardDemo,
     badge::BadgeDemo,
@@ -26,6 +31,11 @@ pub fn Home() -> impl IntoView {
                <a href="/badge">badge</a>
                <a href="/avatar">avatar</a>
                <a href="/accordion">accordion</a>
+               <a href="/alert-dialog">alert-dialog</a>
+               <a href="/aspect-ratio">aspect-ratio</a>
+               <a href="/breadcrumb">breadcrumb</a>
+               <a href="/calendar">calendar</a>
+               <a href="/progress">progress</a>
             </div>
         </main>
     }
@@ -48,6 +58,11 @@ pub fn App() -> impl IntoView {
                 <Route path=StaticSegment("/badge") view=BadgeDemo />
                 <Route path=StaticSegment("/avatar") view=AvatarDemo />
                 <Route path=StaticSegment("/accordion") view=AccordionDemo />
+                <Route path=StaticSegment("/alert-dialog") view=AlertDialogDemo />
+                <Route path=StaticSegment("/aspect-ratio") view=AspectRatioDemo />
+                <Route path=StaticSegment("/breadcrumb") view=BreadcrumbDemo />
+                <Route path=StaticSegment("/calendar") view=CalendarDemo />
+                <Route path=StaticSegment("/progress") view=ProgressDemo />
             </Routes>
         </Router>
     }

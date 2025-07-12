@@ -1,0 +1,3 @@
+Please implement the complete functionality demonstrated in the `@src/components/progress.tsx` and `@src/demo/progress.tsx` file. Write the corresponding Rust code in `@src/components/progress.rs` and `@src/demo/progress.rs` file. After that, integrate this new component into the routing system by adding it to the `@src/app.rs` file.
+Ensure that the new component is fully functional and adheres to the existing coding standards and patterns used in the project.
+When writing the code, you must refer to the usage patterns of components in the `@src/components` directory to ensure consistency and proper functionality. Additionally, adhere strictly to the guidelines and instructions provided in the `@combined_markdown.md` file.
