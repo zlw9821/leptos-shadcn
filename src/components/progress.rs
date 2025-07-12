@@ -26,7 +26,7 @@ pub fn Progress(
             class=tw_merge!("relative h-4 w-full overflow-hidden rounded-full bg-secondary", class.get())
         >
             <div
-                class="h-full w-full flex-1 bg-primary transition-all"
+                class="bg-blue-500 h-full w-full flex-1 bg-primary transition-all"
                 style:transform=move || format!("translateX(-{}%)", 100.0 - percentage.get())
             />
         </div>

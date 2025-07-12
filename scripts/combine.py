@@ -1,13 +1,14 @@
 import os
 
-def combine_markdown_files(source_dir, output_file):
-    with open(output_file, 'w', encoding='utf-8') as outfile:
-        for root, dirs, files in os.walk(source_dir):
+
+def combine_files(source_dir, output_file, file_extension):
+    with open(output_file, 'w+', encoding='utf-8') as outfile:
+        for root, _, files in os.walk(source_dir):
             for file in files:
-                if file.endswith('.md'):
-                    file_path = os.path.join(root, file)
+                if file.endswith(file_extension):
+                    file_path = os.path.abspath(os.path.join(root, file))
                     # 写入文件路径开始标记和文件路径
-                    outfile.write(f"-->{file_path}\n")
+                    outfile.write(f"-->start {file_path}\n")
                     try:
                         with open(file_path, 'r', encoding='utf-8') as infile:
                             content = infile.read()
@@ -16,10 +17,20 @@ def combine_markdown_files(source_dir, output_file):
                     except Exception as e:
                         print(f"Error reading {file_path}: {e}")
                     # 写入文件路径结束标记
-                    outfile.write(f"-->{file_path} end\n")
+                    outfile.write(f"-->end {file_path}\n")
 
 if __name__ == "__main__":
-    source_dir = "reference/book"
-    output_file = "combined_markdown.md"
-    combine_markdown_files(source_dir, output_file)
-    print(f"All Markdown files combined into {output_file}")
+
+    os.system("rm -f instructions.txt code.example.txt")
+
+    source_dir = "../reference/"
+    output_file = "instructions.txt"
+    combine_files(source_dir, output_file, '.md')
+
+    source_dir = "../src/"
+    output_file = "examples.txt"
+    combine_files(source_dir, output_file, '.rs')
+
+    source_dir = "../reference/leptos/examples/"
+    output_file = "examples.txt"
+    combine_files(source_dir, output_file, '.rs')

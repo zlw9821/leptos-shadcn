@@ -5,7 +5,7 @@ use std::time::Duration;
 
 #[component]
 pub fn ProgressDemo() -> impl IntoView {
-    let (progress, set_progress) = signal(50.0);
+    let (progress, set_progress) = signal(100.0);
 
     view! {
         <div class="w-[60%]">
