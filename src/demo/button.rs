@@ -9,10 +9,11 @@ pub fn ButtonDemo() -> impl IntoView {
     let (variant, set_variant) =  signal(ButtonVariant::Default);
     let (size, set_size) = signal(ButtonSize::Lg);
     view! {
-        <div class="flex flex-wrap items-center gap-2 md:flex-row">
-            <Button variant=variant size=size>
-                Button
-            </Button>
-        </div>
+        // <div class="flex flex-wrap items-center gap-2 md:flex-row">
+        //     <Button variant=variant size=size>
+        //         Button
+        //     </Button>
+        // </div>
+        <button class="btn">Button</button>
     }
 }

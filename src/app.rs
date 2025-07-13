@@ -19,41 +19,6 @@ use crate::components::ui::{
 };
 
 #[component]
-pub fn Nav() -> impl IntoView {
-    view! {
-        <Title text="Home" />
-        <header>
-            <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-                <A href="/button">button</A>
-                <A href="/alert">alert</A>
-                <A href="/card">card</A>
-                <A href="/badge">badge</A>
-                <A href="/avatar">avatar</A>
-                <A href="/accordion">accordion</A>
-                <A href="/alert-dialog">alert-dialog</A>
-                <A href="/aspect-ratio">aspect-ratio</A>
-                <A href="/breadcrumb">breadcrumb</A>
-                <A href="/calendar">calendar</A>
-                <A href="/progress">progress</A>
-                <A href="/dialog">dialog</A>
-                <A href="/dropdown-menu">dropdown-menu</A>
-                <A href="/select">select</A>
-                <A href="/checkbox">checkbox</A>
-                <A href="/form">form</A>
-                <A href="/pagination">pagination</A>
-                <A href="/sidebar">sidebar</A>
-                <A href="/slider">slider</A>
-                <A href="/switch">switch</A>
-                <A href="/table">table</A>
-                <A href="/theme">theme</A>
-                <A href="/toast">toast</A>
-                <A href="/popover">popover</A>
-            </div>
-        </header>
-    }
-}
-
-#[component]
 pub fn App() -> impl IntoView {
     provide_meta_context();
 
@@ -264,7 +229,6 @@ pub fn App() -> impl IntoView {
 
             <main>
                 <Routes fallback=|| "Page not found.">
-                    <Route path=StaticSegment("/nav") view=Nav />
                     <Route path=StaticSegment("/alert") view=AlertDemo />
                     <Route path=StaticSegment("/button") view=ButtonDemo />
                     <Route path=StaticSegment("/card") view=Card />
