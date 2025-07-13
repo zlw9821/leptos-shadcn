@@ -1,5 +1,5 @@
 use leptos::prelude::*;
-use crate::components::{
+use crate::components::v1::{
     alert_dialog::{
         AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent,
         AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle,
@@ -13,9 +13,7 @@ pub fn AlertDialogDemo() -> impl IntoView {
     view! {
         <AlertDialog>
             <AlertDialogTrigger>
-                <Button variant={Signal::from(ButtonVariant::Outline)}>
-                    "Show Dialog"
-                </Button>
+                <Button variant=Signal::from(ButtonVariant::Outline)>"Show Dialog"</Button>
             </AlertDialogTrigger>
             <AlertDialogContent>
                 <AlertDialogHeader>

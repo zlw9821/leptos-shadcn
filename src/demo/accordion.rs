@@ -1,18 +1,13 @@
 use leptos::prelude::*;
 
-use crate::components::accordion::{
+use crate::components::v1::accordion::{
     Accordion, AccordionContent, AccordionItem, AccordionTrigger,
 };
 
 #[component]
 pub fn AccordionDemo() -> impl IntoView {
     view! {
-        <Accordion
-            type_="single"
-            collapsible=true
-            class="w-full"
-            default_value="item-1"
-        >
+        <Accordion type_="single" collapsible=true class="w-full" default_value="item-1">
             <AccordionItem value="item-1">
                 <AccordionTrigger>"Product Information"</AccordionTrigger>
                 <AccordionContent class="flex flex-col gap-4 text-balance">

@@ -20,11 +20,7 @@ pub fn BreadcrumbItem(
     #[prop(optional, into)] class: MaybeProp<String>,
     children: Children,
 ) -> impl IntoView {
-    view! {
-        <li class=tw_merge!("inline-flex items-center gap-1.5", class.get())>
-            {children()}
-        </li>
-    }
+    view! { <li class=tw_merge!("inline-flex items-center gap-1.5", class.get())>{children()}</li> }
 }
 
 #[component]
@@ -46,7 +42,12 @@ pub fn BreadcrumbPage(
     children: Children,
 ) -> impl IntoView {
     view! {
-        <span class=tw_merge!("font-normal text-foreground", class.get()) role="link" aria-disabled="true" aria-current="page">
+        <span
+            class=tw_merge!("font-normal text-foreground", class.get())
+            role="link"
+            aria-disabled="true"
+            aria-current="page"
+        >
             {children()}
         </span>
     }
@@ -74,7 +75,15 @@ pub fn BreadcrumbEllipsis(
             aria-hidden="true"
             class=tw_merge!("flex h-9 w-9 items-center justify-center", class.get())
         >
-            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg
+                class="h-4 w-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
                 <circle cx="12" cy="12" r="1"></circle>
                 <circle cx="19" cy="12" r="1"></circle>
                 <circle cx="5" cy="12" r="1"></circle>

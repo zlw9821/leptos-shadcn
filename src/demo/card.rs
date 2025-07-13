@@ -1,6 +1,6 @@
 use leptos::prelude::*;
 
-use crate::components::{
+use crate::components::v1::{
     card::Card, card::CardHeader, card::CardTitle,
     card::CardContent, card::CardFooter, card::CardDescription, 
 };

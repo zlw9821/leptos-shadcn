@@ -41,12 +41,8 @@ pub fn Alert(
     });
 
     view! {
-        <div
-            node_ref=node_ref
-            class=class
-            id=move || id.get()
-            style=style
-        >{children()}
+        <div node_ref=node_ref class=class id=move || id.get() style=style>
+            {children()}
         </div>
     }
 }
@@ -63,10 +59,11 @@ pub fn AlertTitle(
     view! {
         <h5
             node_ref=node_ref
-            class= move || tw_merge!("mb-1 font-medium leading-none tracking-tight", class.get())
+            class=move || tw_merge!("mb-1 font-medium leading-none tracking-tight", class.get())
             id=move || id.get()
             style=style
-        >{children()}
+        >
+            {children()}
         </h5>
     }
 }
@@ -85,7 +82,8 @@ pub fn AlertDescription(
             class=move || tw_merge!("text-sm [&_p]:leading-relaxed", class.get())
             id=move || id.get()
             style=style
-        >{children()}
+        >
+            {children()}
         </div>
     }
 }

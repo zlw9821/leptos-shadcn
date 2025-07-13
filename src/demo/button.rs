@@ -1,6 +1,6 @@
 use leptos::prelude::*;
 
-use crate::components::{
+use crate::components::v1::{
     button::Button, button::ButtonVariant, button::ButtonSize,
 };
 
@@ -10,7 +10,9 @@ pub fn ButtonDemo() -> impl IntoView {
     let (size, set_size) = signal(ButtonSize::Lg);
     view! {
         <div class="flex flex-wrap items-center gap-2 md:flex-row">
-            <Button variant=variant size=size>Button</Button>
+            <Button variant=variant size=size>
+                Button
+            </Button>
         </div>
     }
 }

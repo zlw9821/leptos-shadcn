@@ -10,20 +10,18 @@ pub fn AlertDemo() -> impl IntoView {
     view! {
         <div class="grid w-full max-w-xl items-start gap-4">
             <Alert>
-                <Icon icon={icondata::LuCircleAlert} />
+                <Icon icon=icondata::LuCircleAlert />
                 <AlertTitle>"Success! Your changes have been saved"</AlertTitle>
                 <AlertDescription>
                     "This is an alert with icon, title and description."
                 </AlertDescription>
             </Alert>
             <Alert>
-                <Icon icon={icondata::LuCircleAlert} />
-                <AlertTitle>
-                    "This Alert has a title and an icon. No description."
-                </AlertTitle>
+                <Icon icon=icondata::LuCircleAlert />
+                <AlertTitle>"This Alert has a title and an icon. No description."</AlertTitle>
             </Alert>
             <Alert variant=AlertVariant::Destructive>
-                <Icon icon={icondata::LuCircleAlert} />
+                <Icon icon=icondata::LuCircleAlert />
                 <AlertTitle>"Unable to process your payment."</AlertTitle>
                 <AlertDescription>
                     <p>"Please verify your billing information and try again."</p>

@@ -23,7 +23,9 @@ pub fn Progress(
             aria-valuemin="0"
             aria-valuemax=move || max.get()
             aria-valuenow=move || value.get()
-            class=tw_merge!("relative h-4 w-full overflow-hidden rounded-full bg-secondary", class.get())
+            class=tw_merge!(
+                "relative h-4 w-full overflow-hidden rounded-full bg-secondary", class.get()
+            )
         >
             <div
                 class="bg-blue-500 h-full w-full flex-1 bg-primary transition-all"

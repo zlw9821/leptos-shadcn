@@ -47,12 +47,7 @@ pub fn Badge(
     });
 
     view! {
-        <div
-            node_ref=node_ref
-            class=class
-            id=move || id.get()
-            style=style
-        >
+        <div node_ref=node_ref class=class id=move || id.get() style=style>
             {children()}
         </div>
     }

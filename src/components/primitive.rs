@@ -30,7 +30,9 @@ where
         <TypedFallbackShow
             when=move || as_child.get().unwrap_or_default()
             fallback=move || {
-                element().child(children.with_value(|children| children())).add_any_attr(any_node_ref(node_ref))
+                element()
+                    .child(children.with_value(|children| children()))
+                    .add_any_attr(any_node_ref(node_ref))
             }
         >
             {children.with_value(|children| children()).add_any_attr(any_node_ref(node_ref))}

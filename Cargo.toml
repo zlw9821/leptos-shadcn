@@ -7,10 +7,19 @@ edition = "2024"
 console_error_panic_hook = "0.1"
 console_log = "1"
 log = "0.4"
-web-sys = {version = "0.3", features = ["CssStyleDeclaration", "console", "Element", "ResizeObserver", "ResizeObserverBoxOptions", "ResizeObserverSize", "ResizeObserverEntry", "ResizeObserverOptions"]}
-leptos = { version = "0.8.2", features = ["csr", "islands"] }
-leptos_meta = "0.8.2"
-leptos_router = "0.8.2"
+web-sys = { version = "0.3", features = [
+    "CssStyleDeclaration",
+    "console",
+    "Element",
+    "ResizeObserver",
+    "ResizeObserverBoxOptions",
+    "ResizeObserverSize",
+    "ResizeObserverEntry",
+    "ResizeObserverOptions",
+] }
+leptos = { version = "0.8", features = ["csr", "islands"] }
+leptos_meta = "0.8"
+leptos_router = "0.8"
 gloo-net = { version = "0.6.0", features = ["http"] }
 tailwind_fuse = { version = "0.3.0", features = ["variant"] }
 leptos-style = "0.2.0"

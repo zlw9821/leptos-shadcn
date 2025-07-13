@@ -11,9 +11,7 @@ pub fn Avatar(
         <div class=tw_merge!(
             "relative flex size-8 shrink-0 overflow-hidden rounded-full",
             class.get()
-        )>
-            {children()}
-        </div>
+        )>{children()}</div>
     }
 }
 
@@ -24,11 +22,7 @@ pub fn AvatarImage(
     #[prop(optional, into)] alt: MaybeProp<String>,
 ) -> impl IntoView {
     view! {
-        <img
-            class=tw_merge!("aspect-square size-full", class.get())
-            src=src.get()
-            alt=alt.get()
-        />
+        <img class=tw_merge!("aspect-square size-full", class.get()) src=src.get() alt=alt.get() />
     }
 }
 
@@ -41,8 +35,6 @@ pub fn AvatarFallback(
         <div class=tw_merge!(
             "bg-muted flex size-full items-center justify-center rounded-full",
             class.get()
-        )>
-            {children()}
-        </div>
+        )>{children()}</div>
     }
 }

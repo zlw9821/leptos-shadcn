@@ -9,3 +9,5 @@ pub mod card;
 pub mod badge;
 pub mod avatar;
 pub mod accordion;
+pub mod dialog;
+pub mod dropdown_menu;

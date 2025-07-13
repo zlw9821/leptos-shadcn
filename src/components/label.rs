@@ -17,7 +17,6 @@ pub fn Label(
             node_ref=node_ref
             children=children
             on:mousedown=move |event: MouseEvent| {
-                // Only prevent text selection if clicking inside the label itself.
                 let target = event_target::<web_sys::Element>(&event);
                 if target
                     .closest("button, input, select, textarea")
@@ -26,10 +25,7 @@ pub fn Label(
                 {
                     return;
                 }
-
                 on_mouse_down.run(event.clone());
-
-                // Prevent text selection when double clicking label.
                 if !event.default_prevented() && event.detail() > 1 {
                     event.prevent_default();
                 }
