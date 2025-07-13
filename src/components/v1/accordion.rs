@@ -56,11 +56,7 @@ pub fn Accordion(
         on_select,
     });
 
-    view! {
-        <div class=class.get().unwrap_or_default()>
-            {children()}
-        </div>
-    }
+    view! { <div class=class.get().unwrap_or_default()>{children()}</div> }
 }
 
 // An item within the accordion.
@@ -84,11 +80,7 @@ pub fn AccordionItem(
         tw_merge!("border-b last:border-b-0", class)
     };
 
-    view! {
-        <div class=class>
-            {children()}
-        </div>
-    }
+    view! { <div class=class>{children()}</div> }
 }
 
 // The trigger that toggles an accordion item.
@@ -125,7 +117,7 @@ pub fn AccordionTrigger(
             >
                 {children()}
                 <span class="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200">
-                    <Icon icon={icondata::LuChevronDown} />
+                    <Icon icon=icondata::LuChevronDown />
                 </span>
             </button>
         </h3>
@@ -154,9 +146,7 @@ pub fn AccordionContent(
             class=outer_class
             data-state=move || if item_context.is_selected.get() { "open" } else { "closed" }
         >
-            <div class=inner_class>
-                {children()}
-            </div>
+            <div class=inner_class>{children()}</div>
         </div>
     }
 }

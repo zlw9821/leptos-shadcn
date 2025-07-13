@@ -1,6 +1,6 @@
 use leptos::prelude::*;
 
-use crate::components::progress::Progress;
+use crate::components::ui::progress::Progress;
 use std::time::Duration;
 
 #[component]
